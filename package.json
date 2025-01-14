@@ -43,7 +43,7 @@
   "author": "Vitaliy V. Makeev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wmakeev/table-transform"
+    "url": "https://github.com/wmakeev/table-transform-modules"
   },
   "license": "ISC",
   "devDependencies": {
