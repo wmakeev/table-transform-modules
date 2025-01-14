@@ -1,0 +1,22 @@
+.DS_Store
+.~lock*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# npm
+node_modules
+package-lock.json
+
+# env
+.env*
+!.env.example
+
+# temp
+/__temp
+
+/_inspire
+
+/build

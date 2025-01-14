@@ -1,0 +1,77 @@
+{
+  "name": "@wmakeev/table-transform-modules",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Streaming table data transformation modules",
+  "keywords": [
+    "csv",
+    "table",
+    "convert",
+    "transform",
+    "stream",
+    "etl"
+  ],
+  "exports": "./build/src/index.js",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src/"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "cleanup": "rm -rf build/",
+    "compile": "tsc",
+    "build:dev": "npm run lint && npm run compile",
+    "build": "npm run cleanup && npm run lint && npm run compile",
+    "test": "npm run build && node --env-file=.env --test \"build/**/*.test.js\" --test-reporter=spec",
+    "version": "auto-changelog -p && git add CHANGELOG.md",
+    "release": "np"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "quoteProps": "consistent",
+    "trailingComma": "none",
+    "arrowParens": "avoid"
+  },
+  "np": {
+    "yarn": false
+  },
+  "author": "Vitaliy V. Makeev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wmakeev/table-transform"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@tsconfig/node20": "^20",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/content-type": "^1.1.8",
+    "@types/node": "^22.10.6",
+    "@typescript-eslint/parser": "^8.20.0",
+    "@wmakeev/filtrex": "^6.2.0",
+    "@wmakeev/simplex-context": "^6.7.0",
+    "auto-changelog": "^2.5.0",
+    "envalid": "^8.0.0",
+    "eslint": "^9.18.0",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.3",
+    "typescript-eslint": "^8.20.0"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.717.0",
+    "@wmakeev/table-transform": "^7.0.0",
+    "content-type": "^1.0.5",
+    "csv-parse": "^5.6.0",
+    "date-fns": "^4.1.0",
+    "handlebars": "^4.7.8",
+    "p-retry": "^6.2.1",
+    "uint8array-extras": "^1.4.0",
+    "undici": "^7.2.0",
+    "zod": "^3.24.1"
+  }
+}
